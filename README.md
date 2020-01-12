@@ -15,7 +15,11 @@ The Repo also contains a naive solver for the decision version of the Travelling
 
 ## Usage
 
-You can start by using the sample graph included in the code, like this:
+You will need [node JS](https://nodejs.org/en/) installed.
+
+### Option 1: clone this repo
+
+You can clone this repo and start by using the sample graph included in the code, like this:
 ```sh
 node .
 >.tsp A
@@ -29,6 +33,23 @@ node .
 > .dectsp 98
 { exists: true, path: [ 'A', 'B', 'C', 'D', 'A' ], length: 95 }
 ```
+
+### Option 2: use npm
+
+1. Install the library:
+```sh
+npm install naive-tsp
+```
+2. Create a file named index.js containing the below line:
+```javascript
+const nt = require('naive-tsp');
+```
+3. Simply run:
+```sh
+node .
+```
+
+## Experiment
 
 The included graph looks like this:
 
