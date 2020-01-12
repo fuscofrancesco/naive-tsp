@@ -1,0 +1,29 @@
+{
+  "name": "naive-tsp",
+  "version": "1.0.1",
+  "description": "naive solver for the travelling salesman problem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuscofrancesco/naive-tsp.git"
+  },
+  "keywords": [
+    "tsp",
+    "travelling",
+    "salesman",
+    "problem",
+    "naive",
+    "solver",
+    "np",
+    "np-complete"
+  ],
+  "author": "ffusco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fuscofrancesco/naive-tsp/issues"
+  },
+  "homepage": "https://github.com/fuscofrancesco/naive-tsp#readme"
+}
