@@ -15,13 +15,57 @@ The Repo also contains a naive solver for the decision version of the Travelling
 
 ## Usage
 
+### Option 1: online
+
+Using runkit. Simply click [here](https://npm.runkit.com/naive-tsp) and copy/paste this code:
+```javascript
+const { NaiveTsp } = require("naive-tsp");
+
+const v = ['A', 'B', 'C', 'D'];
+
+const e = {
+  AB: 10,
+  AC: 15,
+  AD: 20,
+  BA: 10,
+  BC: 35,
+  BD: 25,
+  CA: 15,
+  CB: 35,
+  CD: 30,
+  DA: 20,
+  DB: 25,
+  DC: 30
+};
+
+const len = 98;
+
+console.log(new NaiveTsp(v, e, 'A').existsShorter(len));
+
+```
+
+### Option 2: use npm
+
 You will need [node JS](https://nodejs.org/en/) installed.
 
-### Option 1: clone this repo
+1. Install the library:
+```sh
+npm install naive-tsp
+```
+2. Run the below command:
+```sh
+node node_modules/naive-tsp/index.js
+>.tsp A
+{ path: [ 'A', 'B', 'D', 'C', 'A' ], length: 80 }
+```
+
+### Option 3: clone this repo
+
+You will need [node JS](https://nodejs.org/en/) installed.
 
 You can clone this repo and start by using the sample graph included in the code, like this:
 ```sh
-node .
+node index.js
 >.tsp A
 { path: [ 'A', 'B', 'D', 'C', 'A' ], length: 80 }
 ```
@@ -29,24 +73,9 @@ The above calculates the shortest path.
 
 If you want use the solver for the decision version of the problem, simply run:
 ```sh
-node .
+node index.js
 > .dectsp 98
 { exists: true, path: [ 'A', 'B', 'C', 'D', 'A' ], length: 95 }
-```
-
-### Option 2: use npm
-
-1. Install the library:
-```sh
-npm install naive-tsp
-```
-2. Create a file named index.js containing the below line:
-```javascript
-const nt = require('naive-tsp');
-```
-3. Simply run:
-```sh
-node .
 ```
 
 ## Experiment

@@ -1,8 +1,8 @@
 {
   "name": "naive-tsp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "naive solver for the travelling salesman problem",
-  "main": "index.js",
+  "main": "NaiveTsp.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
