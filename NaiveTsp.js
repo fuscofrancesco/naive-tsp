@@ -27,7 +27,9 @@ class NaiveTsp {
   constructor(vtx, edg, start) {
     this.vtx = vtx.slice(0);
     this.edg = edg;
-    this.start = start
+    this.start = start;
+    // make sure the starting element is included twice to allow to close the loop
+    this.vtx.push(this.start);
   }
 
   /*
@@ -37,9 +39,6 @@ class NaiveTsp {
    *
    */
   existsShorter(len) {
-    // make sure the starting element is included twice to allow to close the loop
-    this.vtx.push(this.start);
-
     // generate all permutations
     let permuts = [];
     this.getAllPossiblePermuts(this.vtx, permuts);
@@ -71,9 +70,6 @@ class NaiveTsp {
    *
    */
   shortestPath() {
-    // make sure the starting element is included twice to allow to close the loop
-    this.vtx.push(this.start);
-
     // generate all permutations
     let permuts = [];
     this.getAllPossiblePermuts(this.vtx, permuts);
